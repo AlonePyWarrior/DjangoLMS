@@ -1,0 +1,13 @@
+lms@1.0.0 P:\LMS
++-- autoprefixer@10.4.20
++-- css-loader@7.1.2
++-- htmx.org@2.0.3
++-- mini-css-extract-plugin@2.9.1
++-- postcss-loader@8.1.1
++-- postcss@8.4.47
++-- style-loader@4.0.0
++-- tailwindcss@3.4.13
++-- webpack-bundle-tracker@3.1.1
++-- webpack-cli@5.1.4
+`-- webpack@5.95.0
+

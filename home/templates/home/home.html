@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block title %}صفحه خانه{% endblock title %}
+
+{% block content %}
+    <h2>Home</h2>
+    {% if user.is_authenticated %}
+        <p>
+            {{ user.age }}
+        </p>
+        <p>
+            {{ user.birthdate }}
+        </p>
+    {% endif %}
+
+{% endblock content %}

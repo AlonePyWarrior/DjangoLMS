@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load allauth %}
+
+{% block title %}ورود به دنیای توسعه ی ذهن{% endblock title %}
+
+{% block content %}
+    <div class="max-w-sm mx-auto">
+        <h1>ورود به حساب کاربری</h1>
+        {% include 'account/login_email_password.html' %}
+        {% include 'account/login_OTP.html' %}
+        {% include 'account/login_one_click.html' %}
+        <div>
+            <a href='{% url "account_reset_password" %}'>رمز عبور خود را فراموش کرده ام.</a>
+        </div>
+        <div>
+            <a href='{% url "signup" %}'>حساب کاربری ندارم.</a>
+        </div>
+    </div>
+{% endblock content %}

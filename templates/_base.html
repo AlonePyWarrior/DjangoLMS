@@ -1,0 +1,29 @@
+{% load static %}
+{% load partials %}
+{% load render_bundle from webpack_loader %}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock title %}</title>
+
+    <link rel="icon" data-width="64" data-height="64" href="{% static 'static_src/images/logo.webp' %}"
+          type="image/x-icon">
+
+    {% render_bundle 'main' 'css' %}
+
+
+    {% block link %}{% endblock link %}
+</head>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+
+{% block content %}{% endblock content %}
+
+{% render_bundle 'main' 'css' %}
+</body>
+
+</html>
