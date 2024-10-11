@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # local
     'core',
     'home',
+    'sms',
 ]
 
 # webpack-loader
@@ -208,3 +209,7 @@ else:
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
     # PASSWORD_RESET_EMAIL_TEMPLATE = 'registration/password_reset_email_template.html'
+
+# SMS
+SMS_SENDER = os.environ.get("SMS_SENDER")
+SMS_API_KEY = os.environ.get("SMS_API_KEY")
