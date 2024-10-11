@@ -8,3 +8,4 @@ class SendSMSView(generic.View):
         user = ...
         sms_service.subscription_activation(user)
         return 'the response'
+
